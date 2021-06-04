@@ -22,13 +22,17 @@ int main(){
 
 
     int width = 6;
-    printf("Number: %05.2d\n",6);
+    printf("Number: %5.2d\n",6);
 
     float cost = 12.99;
     float percent = 80.0;
 
     printf("This copy of \"%s\" sells for $%2.2f.\n",BOOK,cost);
     printf("That is %.0f%% of list\n",percent);
+
+    int variable = 0;
+
+    printf("Let's see what will be the output: %d\n", variable = 5);
 
 
     return 0;
