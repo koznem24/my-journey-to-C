@@ -3,25 +3,32 @@
 #include <string.h>
 
 struct Student{
-    char* name;
-    char id[15];
-    int age;
+  //  struct Person student1;
+    int * age;
     float gpa;
 };
 
-void print(struct Student student){
-    printf("     Name   |  ID  |Age| GPA\n");
-    printf("%s| %s| %d| %f \n", student.name,student.id,student.age,student.gpa);
-}
+struct Person{
+    char *name;
+    char *surname;
+};
+
+// void print(struct Student student){
+//     printf("     Name   |  ID  |Age| GPA\n");
+//     printf("%s| %s| %d| %f \n", student.name,student.id,student.age,student.gpa);
+// }
 
 int main(){
+    int someAge = 21;
+    struct Student ali = {
+        
+    //.student1 = {"",""},
+    .age = &someAge,
+    5.0
+    };
+    printf("The size of Struct: %lu\n", sizeof(ali) );
+    printf("Age %d\n", *ali.age);
 
-    struct Student ali;
-    ali.name = "Muhammad Ali";
-    ali.age = 20;
-    strcpy(ali.id,"41455");
-    ali.gpa = 4.1;
-
-    print(ali);
-
+    float a = 1.0/3.0;    
+    printf("%f", a+a+a);
 }
